@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    height: 100vh;
+}
+
+form {
+    background: #fff;
+    width: 20rem;
+    margin: auto;
+    margin-top: 6%;
+    min-height: 30rem;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    -webkit-box-shadow: 5px 6px 9px 1px rgba(0, 0, 0, 0.38); 
+    box-shadow: 5px 6px 9px 1px rgba(0, 0, 0, 0.38);
+}
+
+form h2 {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+
+/* INPUTS */
+
+form input, textarea {
+    border: none;
+    border-bottom: 0.1rem solid #b8b8b8b8;   
+    background: none;
+    width: 100%;
+    resize: none;
+}
+
+form .group {
+    margin: 3rem 0;
+    font-weight: 600;
+}
+
+form input:focus, textarea:focus {
+    outline: none;
+    color: #666;
+}
+
+form label {
+    position: relative;
+    pointer-events: none;
+    bottom: 2rem;
+    transition: all ease 0.3s;
+}
+
+form input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    position: relative;
+    bottom: 4rem;
+    font-size: 0.8rem;
+    color: #FF2525;
+}
+
+/* BAR */
+
+form input:focus~.bar::before,
+textarea:focus~.bar::before {
+    width: 100%;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar::before {
+    position: absolute;
+    content: '';
+    height: 2.2px;
+    width: 0%;
+    bottom: 0;
+    left: 0%;
+    background: linear-gradient(to right, #FFE53B, #FF2525);
+    transition: all ease 0.4s;
+}
+
+.barTextArea::before {
+    bottom: 4px;
+}
+
+/* BUTTON */
+
+form .btn {
+    display: flex;
+    justify-content: center;
+}
+
+form .btn button {
+    background: linear-gradient(to right, #FFE53B, #FF2525);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 0.6rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 0.6rem;
+    transition: transform ease 0.3s;
+}
+
+form .btn button:hover {
+    transform: scale(1.1);
+}
+
+/* THE OTHER PAGE (AFTER SENDED) */
+
+.sended_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 22%;
+    font-size: 2rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.water_mark {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
